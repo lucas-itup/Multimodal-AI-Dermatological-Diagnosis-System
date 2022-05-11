@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<style>
+    .margin {
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <h1>Formulario de registro</h1>
+    <div>
+        <form method="post" target="" id="form-registro">
+            <div class="margin">
+                <label for="nombre">Nombre:</label>
+                <input name="nombre" id="nombre" type="text" placeholder="Ingrese un nombre...">
+            </div>
+            <div class="margin">
+                <label for="apellido">Apellidos:</label>
+                <input name="apellido" id="apellido" type="text" placeholder="Ingrese los apellidos...">
+            </div>
+            <div class="margin">
+                <label>Sexo:</label>
+                <input id="hombre" name="sexo" type="radio"><label for="hombre">Hombre</label>
+                <input id="mujer" name="sexo" type="radio"><label for="mujer">Mujer</label>
+            </div>
+            <div class="margin">
+                <label>Correo:</label>
+                <input name="correo" id="correo" type="email" placeholder="Ingrese un correo...">
+            </div>
+            <div class="margin">
+                <input name="novedades" id="novedades" type="checkbox">
+                <label for="novedades">Deseo recibir información sobre novedades y ofertas.</label>
+            </div>
+            <div class="margin">
+                <input name="novedades" id="novedades" type="checkbox">
+                <label for="novedades">Declaro haber leido y aceptar las condiciones generales del programa y la normatíva sobre protección de datos.</label>
+            </div>
+            <div class="margin">
+                <button type="button" id="btn-enviar">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
