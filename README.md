@@ -143,7 +143,7 @@ Evidence-Based Diagnosis Report
 - **RAM**: 16GB minimum (Colab free tier sufficient)
 - **GPU**: T4 or better (provided by Colab)
 - **Storage**: ~30GB for model weights + datasets
-- **Runtime**: ~10 minutes setup, ~30-60 seconds per analysis
+- **Runtime**: ~10 minutes setup, ~100-200 seconds per analysis
 
 ## Output Structure
 
